@@ -40,6 +40,10 @@ include __DIR__ . './partials/header.php';
                         Category:
                         <?php echo "<i class='fa-solid fa-" . $product->category->name . "'></i>" ?>
                     </div>
+                    <div class="py-3">
+                        Tipo:
+                        <?php echo get_class($product) ?>
+                    </div>
                 </div>
             </div>
         </div>
