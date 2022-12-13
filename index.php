@@ -36,7 +36,8 @@ include __DIR__ . './partials/header.php';
                         <?php echo "Prezzo: $product->price €" ?>
                     </div>
                     <a href="#" class="btn btn-primary">Aggiungi</a>
-                    <div class="pb-3">
+                    <div class="py-3">
+                        Category:
                         <?php echo "<i class='fa-solid fa-" . $product->category->name . "'></i>" ?>
                     </div>
                 </div>
