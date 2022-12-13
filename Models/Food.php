@@ -17,7 +17,6 @@ class Food extends Product
         $this->taste = $_taste;
         $this->quantity = $_quantity;
         $this->deadline = $_deadline;
-        $this->category = $_category;
 
     }
 }

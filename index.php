@@ -2,13 +2,16 @@
 
 // include __DIR__ . './Models/Product.php';
 include __DIR__ . './Models/Food.php';
+include __DIR__ . './Models/Toy.php';
 include __DIR__ . './db.php';
 
 $item1 = new Food("Natural Trainer Sensitive", 12.50, "pollo", 10, "15/10/2024", "./images/prodotto-1.png", new Category("dog"));
 
 $item2 = new Food("Ultima Cibo per Cani", 20.50, "pollo", 10, "15/10/2024", "./images/prodotto-2.jpg", new Category("cat"));
 
-array_push($product_db, $item1, $item2);
+$item3 = new Toy("Pallina per Cani", 10.2, "./images/prodotto-3.jpg", new Category("dog"));
+
+array_push($product_db, $item1, $item2, $item3);
 
 var_dump($item1);
 var_dump($item2);
