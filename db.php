@@ -1,5 +1,7 @@
 <?php
 
+$cartList = [];
+
 $product_db = [];
 
 $item1 = new Food(1, "Natural Trainer Sensitive", 12.50, "pollo", 10, "15/10/2024", "./images/prodotto-1.png", new Category("dog"));
