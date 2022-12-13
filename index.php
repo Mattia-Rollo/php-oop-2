@@ -6,10 +6,10 @@ include __DIR__ . './Models/Toy.php';
 include __DIR__ . './Models/AnimalHouse.php';
 include __DIR__ . './db.php';
 
+session_start();
 
-
-// var_dump($item1);
-// var_dump($item2);
+var_dump($item1);
+var_dump($item2);
 ?>
 
 <?php
@@ -34,16 +34,26 @@ include __DIR__ . './partials/header.php';
                         <span class="me-3">
                             <?php echo "Prezzo: $product->price €" ?>
                         </span>
-                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping pe-2"></i>Aggiungi</a>
-                    </div>
-                    <div class="py-3">
-                        Category:
-                        <?php echo "<i class='fa-solid fa-" . $product->category->name . " fa-xl'></i>" ?>
-                    </div>
-                    <div class="py-3">
-                        Tipo:
-                        <?php echo get_class($product) ?>
-                    </div>
+                    </div class="text-center">
+
+                    <form action="cart.php" method="POST">
+
+                        <button type="submit" name="id_item" value="<?php echo $product->id; ?>" href="#"
+                            class="btn btn-primary"><i class="fa-solid fa-plus"></i>
+                            Aggiungi</button>
+                        <button type="submit" href="#" class="btn btn-success"><i
+                                class="fa-solid fa-cart-shopping pe-2"></i>Compra Ora</button>
+
+                        <form>
+
+                            <div class="py-3">
+                                Category:
+                                <?php echo "<i class='fa-solid fa-" . $product->category->name . " fa-xl'></i>" ?>
+                            </div>
+                            <div class="py-3">
+                                Tipo:
+                                <?php echo get_class($product) ?>
+                            </div>
                 </div>
             </div>
         </div>
