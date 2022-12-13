@@ -1,1 +1,3 @@
 <?php
+
+$product_db = [];
