@@ -81,10 +81,10 @@ include __DIR__ . './partials/header.php';
         <?php } ?>
 
         <div class="container">
-            <div class="row">
+            <div class="row py-3 align-items-center ">
                 <div class="col">
 
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="w-100">
                         <div class="card-body">
                             <h5 class="card-title">
                                 <?php try {
