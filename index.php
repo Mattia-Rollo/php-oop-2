@@ -5,6 +5,7 @@ include __DIR__ . './Models/Food.php';
 include __DIR__ . './Models/Toy.php';
 include __DIR__ . './Models/AnimalHouse.php';
 include __DIR__ . './db.php';
+include __DIR__ . './Exception/Exception.php';
 
 
 // session_start();
@@ -78,6 +79,27 @@ include __DIR__ . './partials/header.php';
         </div>
 
         <?php } ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <?php try {
+                        echo multiplication(5);
+                    } catch (Exception $e) {
+                        echo 'Eccezione:' . ' ' . $e->getMessage();
+                    } ?>
+                </div>
+                <div class="col">
+
+                    <?php try {
+                        echo multiplication('ciao');
+                    } catch (Exception $e) {
+                        echo 'Eccezione:' . ' ' . $e->getMessage();
+                    } ?>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
