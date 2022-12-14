@@ -88,18 +88,18 @@ include __DIR__ . './partials/header.php';
                         <div class="card-body">
                             <h5 class="card-title">
                                 <?php try {
-                                echo multiplication(5);
-                            } catch (Exception $e) {
-                                echo 'Eccezione:' . ' ' . $e->getMessage();
-                            } ?>
+                                    echo multiplication(5);
+                                } catch (Exception $e) {
+                                    echo 'Eccezione:' . ' ' . $e->getMessage();
+                                } ?>
                             </h5>
                             <h6 class="card-subtitle mb-2 text-muted">
 
                             </h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                            <p class="card-text">moltiplico per 5 con una function exception </p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem sed saepe dolor vero hic
+                                ipsam aspernatur consectetur sint dolorem mollitia veniam earum architecto, corporis id
+                                atque placeat ad obcaecati nam?</p>
                         </div>
                     </div>
 
@@ -117,8 +117,9 @@ include __DIR__ . './partials/header.php';
                             </h5>
                             <h6 class="card-subtitle mb-2 text-muted"></h6>
                             <p class="card-text">moltiplico per "ciao" con multiplication("ciao")</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat reiciendis rerum
+                                aperiam maxime iure, nesciunt accusamus asperiores numquam enim, beatae dicta animi
+                                molestias non, accusantium eaque nulla architecto odio?</p>
                         </div>
                     </div>
 
