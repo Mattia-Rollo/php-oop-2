@@ -10,12 +10,13 @@ include __DIR__ . './db.php';
 // session_start();
 // session_destroy();
 
+//esempio di triat 
+echo "Primo Prodotto" . $item1->addWeight(12, "kg");
+echo "Secondo Prodotto" . $item2->addWeight(50, "kg");
 
 
-
-
-var_dump($item1);
-var_dump($item2);
+// var_dump($item1);
+// var_dump($item2);
 if (isset($_SESSION['cartList'])) {
     var_dump($_SESSION['cartList']);
 }
@@ -63,6 +64,7 @@ include __DIR__ . './partials/header.php';
                         Categoria:
                         <?php echo get_class($product); ?>
                     </div>
+
                 </div>
             </div>
         </div>
