@@ -84,19 +84,44 @@ include __DIR__ . './partials/header.php';
             <div class="row">
                 <div class="col">
 
-                    <?php try {
-                        echo multiplication(5);
-                    } catch (Exception $e) {
-                        echo 'Eccezione:' . ' ' . $e->getMessage();
-                    } ?>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <?php try {
+                                echo multiplication(5);
+                            } catch (Exception $e) {
+                                echo 'Eccezione:' . ' ' . $e->getMessage();
+                            } ?>
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+
+                            </h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+
+
                 </div>
                 <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <?php try {
+                                    echo multiplication('ciao');
+                                } catch (Exception $e) {
+                                    echo '<div class="text-danger">Eccezione:' . ' ' . $e->getMessage() . "</div>";
+                                } ?>
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted"></h6>
+                            <p class="card-text">moltiplico per "ciao" con multiplication("ciao")</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
 
-                    <?php try {
-                        echo multiplication('ciao');
-                    } catch (Exception $e) {
-                        echo 'Eccezione:' . ' ' . $e->getMessage();
-                    } ?>
                 </div>
             </div>
         </div>
