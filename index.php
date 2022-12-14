@@ -13,10 +13,12 @@ include __DIR__ . './db.php';
 //esempio di triat 
 echo "Primo Prodotto" . $item1->addWeight(12, "kg");
 echo "Secondo Prodotto" . $item2->addWeight(50, "kg");
+echo "Terzo Prodotto" . $item3->addWeight(20, "kg");
 
+echo $item1->weight;
 
-// var_dump($item1);
-// var_dump($item2);
+var_dump($item1);
+var_dump($item2);
 if (isset($_SESSION['cartList'])) {
     var_dump($_SESSION['cartList']);
 }
@@ -61,8 +63,14 @@ include __DIR__ . './partials/header.php';
                         <?php echo "<i class='fa-solid fa-" . $product->category->name . " fa-xl'></i>" ?>
                     </div>
                     <div class="py-3">
-                        Categoria:
-                        <?php echo get_class($product); ?>
+                        <span>
+                            Categoria:
+                            <?php echo get_class($product); ?>
+                        </span>
+                        <span>
+                            <?php echo $product->getWeight(); ?>
+                        </span>
+
                     </div>
 
                 </div>

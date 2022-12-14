@@ -9,6 +9,9 @@ trait Weight
     {
         $this->weight = $_weight;
         $this->unit = $_unit;
-        return $this->weight . " " . $this->unit;
+    }
+    function getWeight()
+    {
+        return "Peso: " . $this->weight . " " . $this->unit;
     }
 }
